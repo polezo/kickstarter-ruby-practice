@@ -1,0 +1,7 @@
+<h1>User: <%= @user.name %></h1>
+
+<ul>
+    <% @user.projects_created.each do |project| %>
+    <li><%= link_to project.title, project_path(project) %></li>
+    <% end %>
+</ul>

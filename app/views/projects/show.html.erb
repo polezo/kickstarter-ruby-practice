@@ -1,0 +1,16 @@
+<h1>Project: <%= @project.title %></h1>
+
+<div>Goal: <%= @project.goal %></div>
+<div>Creator: <%= @project.creator.name %></div>
+
+<%= link_to "Go to Index", projects_path %>
+<%= link_to "Edit the project", edit_project_path(@project) %>
+<%= link_to "Delete this project", project_path(@project), method: :destroy %>
+
+<div>
+<%= form_tag project_path, method: "DELETE" do %>
+<%= submit_tag "Destroy this Project" %>
+<% end %>
+</div>
+
+

@@ -1,0 +1,11 @@
+<%= form_for @user do |f| %>
+    <%= f.label :name, "Your Name" %>
+    <%= f.text_field :name %>
+    <%= f.fields_for :projects_created do |field| %>
+        <%= field.label :title %>
+        <%= field.text_field :title %>
+        <%= field.label :goal %>
+        <%= field.number_field :goal %>
+    <% end %>
+    <%= f.submit %>
+<%end%>

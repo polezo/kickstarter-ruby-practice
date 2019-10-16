@@ -1,0 +1,9 @@
+<h1>Projects</h1>
+
+<ul>
+    <% @projects.each do |project| %>
+    <li>Title: <%= link_to project.title, project_path(project) %></li>
+    <li>Creator: <%= link_to project.creator.name, user_path(project.creator) %></li>
+    <br>
+    <% end %>
+</ul>
